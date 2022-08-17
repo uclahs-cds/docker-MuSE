@@ -17,4 +17,4 @@ RUN groupadd -g 500001 bldocker && \
 # Change the default user to bldocker from root
 USER bldocker
 
-LABEL maintainer="Arpi Beshlikyan <abeshlikyan@mednet.ucla.edu>"
+LABEL maintainer="Mao Tian <maotian@mednet.ucla.edu>"
