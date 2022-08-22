@@ -3,14 +3,10 @@ Dockerfile for MuSE.
 
 MuSE is a somatic caller for heterogeneous normal-tumor paired samples. Details can be found [here](https://github.com/wwylab/MuSE).
 
-This image is located in the Boutros Lab Docker Hub repo: https://hub.docker.com/repository/docker/blcdsdockerregistry/bl-base
+This image is located in the Boutros Lab Docker Hub repo: https://hub.docker.com/repository/docker/blcdsdockerregistry/.
 
 # Documentation
-Docker introduction [here](https://confluence.mednet.ucla.edu/display/BOUTROSLAB/Docker+Introduction)
-
-Dockerfile Best Practices [here](https://confluence.mednet.ucla.edu/display/BOUTROSLAB/Dockerfile+Best+Practices)
-
-Docker image versioning standard [here](https://confluence.mednet.ucla.edu/display/BOUTROSLAB/Docker+image+versioning+standardization)
+MuSE documentation is [here](https://github.com/wwylab/MuSE).
 
 
 # Version
@@ -34,7 +30,7 @@ Author: Mao Tian.
 
 [docker-MuSE](https://github.com/uclahs-cds/docker-MuSE/) is licensed under the GNU General Public License version 2. See the file LICENSE for the terms of the GNU GPL license.
 
-<A docker image for somatic caller, MuSE>
+A docker image for somatic caller, MuSE.
 
 Copyright (C) 2021 University of California Los Angeles ("Boutros Lab") All rights reserved.
 
