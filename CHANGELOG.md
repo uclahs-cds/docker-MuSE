@@ -13,7 +13,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ---
 
-## [1.0.0] - 2022-08-19
+## [1.0.rc] - 2022-08-23
 ### Added
 - Add Dockerfile for MuSE 1.0.rc.
 - Add autobuild GitHub action.

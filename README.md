@@ -12,7 +12,7 @@ MuSE documentation is [here](https://github.com/wwylab/MuSE).
 # Version
 | Tool | Version |
 |------|---------|
-|MuSE| 1.0-rc|
+|MuSE| 1.0.rc|
 
 
 ---
@@ -30,7 +30,7 @@ Author: Mao Tian.
 
 [docker-MuSE](https://github.com/uclahs-cds/docker-MuSE/) is licensed under the GNU General Public License version 2. See the file LICENSE for the terms of the GNU GPL license.
 
-A docker image for somatic caller, MuSE.
+A docker image for the somatic SNV caller, MuSE.
 
 Copyright (C) 2022 University of California Los Angeles ("Boutros Lab") All rights reserved.
 
