@@ -1,40 +1,38 @@
-# docker-tool_name
-Template Repository for the Boutros Lab Dockerfiles based on the bl-base image.
+# docker-MuSE
+Dockerfile for MuSE.
 
-The bl-base image is located in the Boutros Lab Docker Hub repo: https://hub.docker.com/repository/docker/blcdsdockerregistry/bl-base
+MuSE is a tool for fast and accurate calling of somatic point mutations from tumor-normal paired samples. MuSE uses the Markov substitution model to detect somatic mutations for whole-genome sequencing and whole-exome sequencing samples. Details can be found [here](https://github.com/wwylab/MuSE).
+
+This image can be found in docker-MuSE's GitHub package page [here](https://github.com/uclahs-cds/docker-MuSE/pkgs).
 
 # Documentation
-Docker introduction [here](https://confluence.mednet.ucla.edu/display/BOUTROSLAB/Docker+Introduction)
-
-Dockerfile Best Practices [here](https://confluence.mednet.ucla.edu/display/BOUTROSLAB/Dockerfile+Best+Practices)
-
-Docker image versioning standard [here](https://confluence.mednet.ucla.edu/display/BOUTROSLAB/Docker+image+versioning+standardization)
+MuSE documentation is [here](https://github.com/wwylab/MuSE).
 
 
 # Version
 | Tool | Version |
 |------|---------|
-|tool_name| X.X.X|
-|tool_name_2|X.X.X|
+|MuSE| 1.0.rc|
 
 
 ---
 
 ## References
 
-1. Tool specific references can be listed here
+1.  Fan, Y. et al. (2016) ‘MuSE: accounting for tumor heterogeneity using a sample-specific error model improves sensitivity and specificity in mutation calling from sequencing data’, Genome biology, 17(1), p. 178. doi: 10.1186/s13059-016-1029-6.
+
 
 ---
 
 ## License
 
-Author: Name1, Name2
+Author: Mao Tian.
 
-[docker repo name] is licensed under the GNU General Public License version 2. See the file LICENSE for the terms of the GNU GPL license.
+[docker-MuSE](https://github.com/uclahs-cds/docker-MuSE/) is licensed under the GNU General Public License version 2. See the file LICENSE for the terms of the GNU GPL license.
 
-<one line to give the program's name and a brief idea of what it does.>
+MuSE is a fast and accurate tool to detect somatic point mutations using the Markov substitution model.
 
-Copyright (C) 2021 University of California Los Angeles ("Boutros Lab") All rights reserved.
+Copyright (C) 2022 University of California Los Angeles ("Boutros Lab") All rights reserved.
 
 This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
 
