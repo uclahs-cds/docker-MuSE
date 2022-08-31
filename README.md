@@ -1,9 +1,9 @@
 # docker-MuSE
 Dockerfile for MuSE.
 
-MuSE is a tool for fast and accurate calling of somatic point mutation from normal-tumor paired samples. MuSE uses Markov substitution model to detect somatic mutation for whole-genome sequencing and whole-exome sequencing samples. Details can be found [here](https://github.com/wwylab/MuSE).
+MuSE is a tool for fast and accurate calling of somatic point mutations from tumor-normal paired samples. MuSE uses the Markov substitution model to detect somatic mutations for whole-genome sequencing and whole-exome sequencing samples. Details can be found [here](https://github.com/wwylab/MuSE).
 
-This image is located in the Boutros Lab Docker Hub repo: https://hub.docker.com/repository/docker/blcdsdockerregistry/.
+This image can be found in docker-MuSE's GitHub package page [here](https://github.com/uclahs-cds/docker-MuSE/pkgs).
 
 # Documentation
 MuSE documentation is [here](https://github.com/wwylab/MuSE).
