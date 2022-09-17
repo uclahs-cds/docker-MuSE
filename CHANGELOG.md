@@ -9,7 +9,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ## [Unreleased]
 ### Changed
-
+- Update Dockerfile version to MuSE 2.0.
 ---
 
 ## [1.0.rc] - 2022-08-23
