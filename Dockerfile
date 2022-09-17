@@ -9,7 +9,7 @@ RUN cd MuSE && ./install_muse.sh
 
 RUN mkdir /MuSE/bin
 RUN cp /MuSE/MuSE /MuSE/bin
-RUN PATH=$PATH:/MuSE/bin
+ENV PATH="${PATH}:/MuSE/bin"
 
 # Change the default user to bldocker from root
 USER bldocker
