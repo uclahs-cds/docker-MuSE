@@ -4,8 +4,8 @@ ARG DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
     git g++ cmake autoconf libtool liblzma-dev zlib1g-dev libbz2-dev libcurl3-dev libssl-dev \
-    ca-certificates automake autotools-dev \
-    apt-get clean && rm -rf /var/lib/apt/lists/*
+    ca-certificates cpp make libltdl-dev \
+    && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 RUN git clone --recursive https://github.com/wwylab/MuSE.git
 RUN cd MuSE && bash ./install_muse.sh
