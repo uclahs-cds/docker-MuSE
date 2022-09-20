@@ -12,7 +12,7 @@ MuSE documentation is [here](https://github.com/wwylab/MuSE).
 # Version
 | Tool | Version |
 |------|---------|
-|MuSE| 1.0.rc|
+|MuSE| 2.0|
 
 
 ---

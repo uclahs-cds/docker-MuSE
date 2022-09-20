@@ -1,20 +1,25 @@
-FROM blcdsdockerregistry/bl-base:1.1.0 AS builder
-
-# Use mamba to install tools and dependencies into /usr/local
-ARG MUSE_VERSION=1.0.rc
-RUN mamba create -qy -p /usr/local \
-    -c bioconda \
-    muse==${MUSE_VERSION}
-
-# Deploy the target tools into a base image
 FROM ubuntu:20.04
-COPY --from=builder /usr/local /usr/local
 
-# Add a new user/group called bldocker
-RUN groupadd -g 500001 bldocker && \
-    useradd -r -u 500001 -g bldocker bldocker
+ARG DEBIAN_FRONTEND=noninteractive
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    git g++ cmake autoconf libtool liblzma-dev zlib1g-dev libbz2-dev libcurl3-dev libssl-dev \
+    ca-certificates cpp make libltdl-dev wget unzip \
+    && apt-get clean && rm -rf /var/lib/apt/lists/*
+
+
+ENV MUSE_SHA512=824417ee5f5e20073fc7504fa4d931e4f95c9df2cb6cc856808784f3519f4ef2bbe5b123e464f763f20b8a37443d27d1698f2170efc7efa78cd922a97775074a
+WORKDIR /src/
+RUN wget https://github.com/wwylab/MuSE/archive/refs/tags/v2.0.zip \
+    && echo "${MUSE_SHA512} v2.0.zip" | sha512sum --strict -c \
+    && unzip v2.0.zip && rm v2.0.zip
+
+RUN cd /src/MuSE-2.0 && bash ./install_muse.sh
+RUN ln -s /src/MuSE-2.0/MuSE /usr/local/bin/
 
 # Change the default user to bldocker from root
+RUN groupadd -g 500001 bldocker && \
+    useradd -r -u 500001 -g bldocker bldocker
 USER bldocker
 
 LABEL maintainer="Mao Tian <maotian@mednet.ucla.edu>"
