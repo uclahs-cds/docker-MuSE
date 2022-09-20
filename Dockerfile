@@ -12,12 +12,10 @@ ENV MUSE_SHA512=824417ee5f5e20073fc7504fa4d931e4f95c9df2cb6cc856808784f3519f4ef2
 WORKDIR /src/
 RUN wget https://github.com/wwylab/MuSE/archive/refs/tags/v2.0.zip \
     && echo "${MUSE_SHA512} v2.0.zip" | sha512sum --strict -c \
-    && unzip v2.0.zip \
-    && mv MuSE-2.0 MuSE \
-    && chmod 777 -R /src/MuSE
+    && unzip v2.0.zip && rm v2.0.zip
 
-RUN cd /src/MuSE && bash ./install_muse.sh
-ENV PATH="${PATH}:/src/MuSE"
+RUN cd /src/MuSE-2.0 && bash ./install_muse.sh
+RUN ln -s /src/MuSE-2.0/MuSE /usr/local/bin/
 
 # Change the default user to bldocker from root
 RUN groupadd -g 500001 bldocker && \
