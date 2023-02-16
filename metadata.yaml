@@ -2,8 +2,8 @@
 Category: 'docker'
 Description: 'Docker repository for MuSE'
 Maintainers: ['maotian@mednet.ucla.edu']
-Contributors: ['Mao Tian']
+Contributors: ['Mao Tian', 'Sorel Fitz-Gibbon']
 Languages: ['Dockerfile']
 Tools: ['MuSE']
-Version: '2.0'
+Version: '2.0.1'
 Image_name: 'MuSE'

@@ -8,6 +8,11 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 ---
 
 ## [Unreleased]
+
+## [2.0.1] - 2023-02-15
+### Changed
+- Update to MuSE v2.0.1
+
 ### Changed
 - Allow tags that do not following semantic versioning to be created for GitHub Packages using `.github/workflows/Docker-build-release.yaml` auto-build.
 - Update Dockerfile version to MuSE v2.0.

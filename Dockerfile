@@ -8,14 +8,14 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 
-ENV MUSE_SHA512=824417ee5f5e20073fc7504fa4d931e4f95c9df2cb6cc856808784f3519f4ef2bbe5b123e464f763f20b8a37443d27d1698f2170efc7efa78cd922a97775074a
+ENV MUSE_SHA512=dd683bdd22c38aba422800ca48eaf74b18b22fab326568c925c692d625c546576aa3510dcccc8c7784884bf7de2ae8ce22dd2a672da6ff41791e0914fd93a4cb
 WORKDIR /src/
-RUN wget https://github.com/wwylab/MuSE/archive/refs/tags/v2.0.zip \
-    && echo "${MUSE_SHA512} v2.0.zip" | sha512sum --strict -c \
-    && unzip v2.0.zip && rm v2.0.zip
+RUN wget https://github.com/wwylab/MuSE/archive/refs/tags/v2.0.1.zip \
+    && echo "${MUSE_SHA512} v2.0.1.zip" | sha512sum --strict -c \
+    && unzip v2.0.1.zip && rm v2.0.1.zip
 
-RUN cd /src/MuSE-2.0 && bash ./install_muse.sh
-RUN ln -s /src/MuSE-2.0/MuSE /usr/local/bin/
+RUN cd /src/MuSE-2.0.1 && bash ./install_muse.sh
+RUN ln -s /src/MuSE-2.0.1/MuSE /usr/local/bin/
 
 # Change the default user to bldocker from root
 RUN groupadd -g 500001 bldocker && \
