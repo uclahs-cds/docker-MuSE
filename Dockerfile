@@ -23,4 +23,5 @@ RUN groupadd -g 500001 bldocker && \
     useradd -r -u 500001 -g bldocker bldocker
 USER bldocker
 
-LABEL maintainer="Mao Tian <maotian@mednet.ucla.edu>"
+LABEL maintainer="Sorel Fitz-Gibbon <sfitzgibbon@mednet.ucla.edu>" \
+        org.opencontainers.image.source=https://github.com/uclahs-cds/docker-MuSE
