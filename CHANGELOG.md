@@ -9,7 +9,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ## [Unreleased]
 
-## [2.0.4] - 2023-11-13
+## [2.1.1] - 2024-10-09
 ### Changed
 - Update to MuSE v2.0.4
 

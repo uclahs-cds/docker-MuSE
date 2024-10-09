@@ -5,5 +5,5 @@ Maintainers: ['maotian@mednet.ucla.edu']
 Contributors: ['Mao Tian', 'Sorel Fitz-Gibbon']
 Languages: ['Dockerfile']
 Tools: ['MuSE']
-Version: '2.0.4'
+Version: '2.1.1'
 Image_name: 'MuSE'
