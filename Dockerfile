@@ -1,6 +1,6 @@
 FROM ubuntu:23.04
 
-ARG MUSE_VERSION=2.1.1
+ARG MUSE_VERSION=2.1.2
 ARG DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
