@@ -1,6 +1,7 @@
 FROM ubuntu:23.04
 
 ARG MUSE_VERSION=2.1.2
+ARG MUSE_SHA512=49560abc7e14661be08a5d93e25f38c2e6431bf8c99782324c7b336c6b82bbd7e34ecbeb59299c558eb582288518e783e0ee6f7869503f1d4dc57ca3ea0c1223
 ARG DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
@@ -11,6 +12,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 WORKDIR /src/
 RUN wget https://github.com/wwylab/MuSE/archive/refs/tags/v${MUSE_VERSION}.zip \
+    && echo "${MUSE_SHA512} v${MUSE_VERSION}.zip" | sha512sum --strict -c \
     && unzip v${MUSE_VERSION}.zip && rm v${MUSE_VERSION}.zip
 
 RUN cd /src/MuSE-${MUSE_VERSION} && bash ./install_muse.sh
